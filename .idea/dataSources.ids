@@ -25,7 +25,7 @@
       </column>
       <column id="6" parent="2" name="sex">
         <comment>性别</comment>
-        <data-type>char(1)</data-type>
+        <data-type>char(15)</data-type>
       </column>
       <column id="7" parent="2" name="address">
         <comment>地址</comment>
