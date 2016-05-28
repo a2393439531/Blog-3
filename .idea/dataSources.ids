@@ -31,7 +31,11 @@
         <comment>地址</comment>
         <data-type>varchar(256)</data-type>
       </column>
-      <key id="8" parent="2" name="PRIMARY">
+      <column id="8" parent="2" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <key id="9" parent="2" name="PRIMARY">
         <columns>id</columns>
         <primary>1</primary>
       </key>

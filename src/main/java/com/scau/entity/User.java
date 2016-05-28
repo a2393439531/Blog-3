@@ -1,7 +1,8 @@
 package com.scau.entity;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
+
 public class User implements Serializable {
     private Integer id;
 
@@ -12,6 +13,8 @@ public class User implements Serializable {
     private String sex;
 
     private String address;
+
+    private String password;
 
     private static final long serialVersionUID = 1L;
 
@@ -55,6 +58,14 @@ public class User implements Serializable {
         this.address = address == null ? null : address.trim();
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password == null ? null : password.trim();
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -66,6 +77,7 @@ public class User implements Serializable {
         sb.append(", birthday=").append(birthday);
         sb.append(", sex=").append(sex);
         sb.append(", address=").append(address);
+        sb.append(", password=").append(password);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();
