@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scau.dao.PhotoMapper" >
+  <resultMap id="BaseResultMap" type="com.scau.entity.Photo" >
+    <id column="pho_id" property="phoId" jdbcType="INTEGER" />
+    <result column="art_id" property="artId" jdbcType="INTEGER" />
+    <result column="img_url" property="imgUrl" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.scau.entity.Photo" extends="BaseResultMap" >
+    <result column="img_des" property="imgDes" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    pho_id, art_id, img_url
+  </sql>
+  <sql id="Blob_Column_List" >
+    img_des
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from photo
+    where pho_id = #{phoId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from photo
+    where pho_id = #{phoId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.scau.entity.Photo" >
+    insert into photo (pho_id, art_id, img_url, 
+      img_des)
+    values (#{phoId,jdbcType=INTEGER}, #{artId,jdbcType=INTEGER}, #{imgUrl,jdbcType=VARCHAR}, 
+      #{imgDes,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.scau.entity.Photo" >
+    insert into photo
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="phoId != null" >
+        pho_id,
+      </if>
+      <if test="artId != null" >
+        art_id,
+      </if>
+      <if test="imgUrl != null" >
+        img_url,
+      </if>
+      <if test="imgDes != null" >
+        img_des,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="phoId != null" >
+        #{phoId,jdbcType=INTEGER},
+      </if>
+      <if test="artId != null" >
+        #{artId,jdbcType=INTEGER},
+      </if>
+      <if test="imgUrl != null" >
+        #{imgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="imgDes != null" >
+        #{imgDes,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.scau.entity.Photo" >
+    update photo
+    <set >
+      <if test="artId != null" >
+        art_id = #{artId,jdbcType=INTEGER},
+      </if>
+      <if test="imgUrl != null" >
+        img_url = #{imgUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="imgDes != null" >
+        img_des = #{imgDes,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where pho_id = #{phoId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.scau.entity.Photo" >
+    update photo
+    set art_id = #{artId,jdbcType=INTEGER},
+      img_url = #{imgUrl,jdbcType=VARCHAR},
+      img_des = #{imgDes,jdbcType=LONGVARCHAR}
+    where pho_id = #{phoId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.scau.entity.Photo" >
+    update photo
+    set art_id = #{artId,jdbcType=INTEGER},
+      img_url = #{imgUrl,jdbcType=VARCHAR}
+    where pho_id = #{phoId,jdbcType=INTEGER}
+  </update>
+</mapper>

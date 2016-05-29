@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scau.dao.ArticleDetailMapper" >
+  <resultMap id="BaseResultMap" type="com.scau.entity.ArticleDetail" >
+    <id column="art_de_id" property="artDeId" jdbcType="INTEGER" />
+    <result column="article_click" property="articleClick" jdbcType="INTEGER" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="com.scau.entity.ArticleDetail" extends="BaseResultMap" >
+    <result column="content" property="content" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    art_de_id, article_click
+  </sql>
+  <sql id="Blob_Column_List" >
+    content
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from article_detail
+    where art_de_id = #{artDeId,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from article_detail
+    where art_de_id = #{artDeId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.scau.entity.ArticleDetail" >
+    insert into article_detail (art_de_id, article_click, content
+      )
+    values (#{artDeId,jdbcType=INTEGER}, #{articleClick,jdbcType=INTEGER}, #{content,jdbcType=LONGVARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.scau.entity.ArticleDetail" >
+    insert into article_detail
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="artDeId != null" >
+        art_de_id,
+      </if>
+      <if test="articleClick != null" >
+        article_click,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="artDeId != null" >
+        #{artDeId,jdbcType=INTEGER},
+      </if>
+      <if test="articleClick != null" >
+        #{articleClick,jdbcType=INTEGER},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.scau.entity.ArticleDetail" >
+    update article_detail
+    <set >
+      <if test="articleClick != null" >
+        article_click = #{articleClick,jdbcType=INTEGER},
+      </if>
+      <if test="content != null" >
+        content = #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where art_de_id = #{artDeId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.scau.entity.ArticleDetail" >
+    update article_detail
+    set article_click = #{articleClick,jdbcType=INTEGER},
+      content = #{content,jdbcType=LONGVARCHAR}
+    where art_de_id = #{artDeId,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.scau.entity.ArticleDetail" >
+    update article_detail
+    set article_click = #{articleClick,jdbcType=INTEGER}
+    where art_de_id = #{artDeId,jdbcType=INTEGER}
+  </update>
+</mapper>
