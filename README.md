@@ -1,5 +1,6 @@
 # Blog
 springmvc+mybatis+maven+mysql搭建博客
+```
 {
 	"variables": [],
 	"info": {
@@ -251,3 +252,4 @@ springmvc+mybatis+maven+mysql搭建博客
 		}
 	]
 }
+```
