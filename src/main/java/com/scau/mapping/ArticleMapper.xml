@@ -25,6 +25,15 @@
     from article
     where art_id = #{artId,jdbcType=INTEGER}
   </select>
+  <select id="selectBylimit" resultType="com.scau.entity.Article" resultMap="BaseResultMap" parameterType="map">
+      SELECT * FROM article WHERE user_id=#{userId} order by art_id limit #{offset},#{count}
+  </select>
+  <select id="selectMatchTitle" resultType="com.scau.entity.Article" resultMap="BaseResultMap">
+    SELECT * FROM article WHERE user_id=#{userId} and title LIKE "%"#{title}"%"
+  </select>
+  <select id="selectByCatId" resultType="com.scau.entity.Article" resultMap="BaseResultMap">
+    SELECT * FROM article WHERE cat_id=#{catId} and user_id=#{userId}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from article
     where art_id = #{artId,jdbcType=INTEGER}

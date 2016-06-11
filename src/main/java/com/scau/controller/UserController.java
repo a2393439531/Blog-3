@@ -51,4 +51,9 @@ public class UserController {
     public ResponseObject register(@RequestBody User user) {
         return this.userService.register(user);
     }
+    @RequestMapping(value = "/getAll",method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseObject getAll(){
+        return this.userService.getAll();
+    }
 }

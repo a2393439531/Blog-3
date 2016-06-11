@@ -18,4 +18,5 @@ public interface CateoryMapper {
     int updateByPrimaryKeySelective(Cateory record);
 
     int updateByPrimaryKey(Cateory record);
+    List<Cateory> getAll();
 }

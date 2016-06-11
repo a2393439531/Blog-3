@@ -11,6 +11,7 @@ public final class ServerConstant {
     public static final String USERNAME = "username";
     public static final String PASSWORD = "password";
     public static final String ID = "id";
+    public static final String ARTID="artId";
     //public static final String TITLE="title";
    // public static final String USER_ID="user_id";
     public static final String MSG_INVALIDTYPE = "参数类型不符合";
@@ -24,4 +25,15 @@ public final class ServerConstant {
     public static final String MSG_POST_SUCCESS="发送文章成功";
     public static final String MSG_TIL_SUM_NOT_NULL ="标题和摘要都不能为空";
     public static final String MSG_NOT_LOGIN ="用户未登录";
+    public static final String MSG_POST_DELETE_SUCCESS = "删除文章成功";
+    public static final String MSG_POST_DELETE_FAIL = "删除文章失败";
+    public static final String MSG_POST_MODIFY_FAIL="修改文章失败";
+    public static final String MSG_POST_MODIFY_SUCCESS="修改文章成功";
+    public static final String MSG_GET_ALL_USER="成功获取所有用户信息";
+    public static final String MSG_GET_LIMIT_POST = "获取分页文章";
+    public static final String MSG_LOOK_POST_SUCCESS = "查看具体文章成功";
+    public static final String MSG_POST_NOT_EXIST = "没有该文章";
+    public static final String MSG_GET_MATCH_POST = "获取匹配的文章";
+    public static final String MSG_GET_ALL_CAT = "获取所有分类";
+    public static final String MSG_GET_POST_CATID = "获取分类文章";
 }

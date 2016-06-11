@@ -60,4 +60,8 @@ public class UserService {
     public User findUser(User user){
         return this.userMapper.login(user.getUsername(),user.getPassword());
     }
+
+    public ResponseObject getAll(){
+        return new ResponseObject(State.OK,MSG_GET_ALL_USER,this.userMapper.getAll());
+    }
 }

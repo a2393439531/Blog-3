@@ -2,6 +2,8 @@ package com.scau.dao;
 
 import com.scau.entity.User;
 
+import java.util.List;
+
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -16,4 +18,5 @@ public interface UserMapper {
     int updateByPrimaryKey(User record);
     User login(String username,String password);
     int insertSelectiveDeId(User record);
+    List<User> getAll();
 }

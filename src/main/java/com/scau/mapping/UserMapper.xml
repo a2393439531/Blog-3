@@ -24,6 +24,9 @@
     from user
     where username = #{0,jdbcType=VARCHAR}and password=#{1,jdbcType=VARCHAR}
   </select>
+  <select id="getAll" resultType="com.scau.entity.User" resultMap="BaseResultMap">
+    SELECT * FROM USER ORDER BY id
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from user
     where id = #{id,jdbcType=INTEGER}

@@ -2,6 +2,9 @@ package com.scau.dao;
 
 import com.scau.entity.Article;
 
+import java.util.List;
+import java.util.Map;
+
 public interface ArticleMapper {
     int deleteByPrimaryKey(Integer artId);
 
@@ -17,4 +20,7 @@ public interface ArticleMapper {
     int updateByPrimaryKeyWithBLOBs(Article record);
 
     int updateByPrimaryKey(Article record);
+    List<Article> selectBylimit(Map map);
+    List<Article> selectMatchTitle(Map map);
+    List<Article> selectByCatId(Map map);
 }
