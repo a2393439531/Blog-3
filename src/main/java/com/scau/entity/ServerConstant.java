@@ -12,6 +12,7 @@ public final class ServerConstant {
     public static final String PASSWORD = "password";
     public static final String ID = "id";
     public static final String ARTID="artId";
+    public static final String CATNA="catna";
     //public static final String TITLE="title";
    // public static final String USER_ID="user_id";
     public static final String MSG_INVALIDTYPE = "参数类型不符合";
@@ -36,4 +37,9 @@ public final class ServerConstant {
     public static final String MSG_GET_MATCH_POST = "获取匹配的文章";
     public static final String MSG_GET_ALL_CAT = "获取所有分类";
     public static final String MSG_GET_POST_CATID = "获取分类文章";
+    public static final String MSG_ADD_CAT = "添加分类成功";
+    public static final String MSG_ADD_CAT_FAIL = "添加分类失败";
+    public static final String CATID = "catId";
+    public static final String MSG_DELETE_CAT_SUCCESS = "删除分类成功";
+    public static final String MSG_DELETE_CAT_FAIL = "删除分类失败";
 }

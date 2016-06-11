@@ -14,7 +14,7 @@ public interface ArticleMapper {
     int insertSelectiveDeId(Article record);
 
     Article selectByPrimaryKey(Integer artId);
-
+    int getCount(Map map);
     int updateByPrimaryKeySelective(Article record);
 
     int updateByPrimaryKeyWithBLOBs(Article record);

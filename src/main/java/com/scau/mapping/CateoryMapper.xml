@@ -57,11 +57,11 @@
       </if>
     </trim>
   </insert>
-  <insert id="insertSelectiveDeId" parameterType="com.scau.entity.Cateory" useGeneratedKeys="true" keyProperty="catId">
-      <selectKey keyProperty="catId" resultType="int" order="BEFORE">
-          SELECT LAST_INSERT_ID()
+  <insert id="insertSelectiveDeId" parameterType="com.scau.entity.Cateory"  >
+      <selectKey keyProperty="catId" resultType="java.lang.Integer" order="BEFORE">
+          SELECT LAST_INSERT_ID() AS ID
       </selectKey>
-    insert into cateory
+      insert into cateory
       <trim prefix="(" suffix=")" suffixOverrides="," >
           <if test="catId != null" >
               cat_id,

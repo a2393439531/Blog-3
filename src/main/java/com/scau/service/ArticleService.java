@@ -1,9 +1,6 @@
 package com.scau.service;
 
-import com.scau.dao.ArticleDetailMapper;
-import com.scau.dao.ArticleMapper;
-import com.scau.dao.CateoryMapper;
-import com.scau.dao.TagMapper;
+import com.scau.dao.*;
 import com.scau.entity.*;
 import com.scau.utils.CheckParamsUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +13,8 @@ import java.util.Map;
 
 import static com.scau.entity.ServerConstant.ARTID;
 import static com.scau.entity.ServerConstant.MSG_INVALIDTYPE;
+import static com.scau.entity.ServerConstant.MSG_NOt_EXIST_USER;
+import static com.scau.service.State.ERROR;
 
 /**
  * @Author: beyondboy
@@ -33,6 +32,8 @@ public class ArticleService {
     TagMapper tagMapper;
     @Autowired
     ArticleDetailMapper articleDetailMapper;
+    @Autowired
+    private UserMapper userMapper;
     public ResponseObject publish(ArticleInfo articleInfo){
         Article article=new Article();
         List<Cateory> cateories;
@@ -79,7 +80,14 @@ public class ArticleService {
     }
 
     public ResponseObject getArticleByLimit(Map map){
-        return new ResponseObject(State.OK,ServerConstant.MSG_GET_LIMIT_POST,articleMapper.selectBylimit(map));
+        User user=this.userMapper.selectByPrimaryKey((Integer) map.get("userId"));
+        if(user==null){
+            return new ResponseObject(ERROR, MSG_NOt_EXIST_USER);
+        }
+        ArticleLimit articleLimit=new ArticleLimit();
+        articleLimit.setCount(articleMapper.getCount(map));
+        articleLimit.setArticles(articleMapper.selectBylimit(map));
+        return new ResponseObject(State.OK,ServerConstant.MSG_GET_LIMIT_POST,articleLimit);
     }
 
     public ResponseObject lookArtDet(Map map){
@@ -114,5 +122,26 @@ public class ArticleService {
 
     public ResponseObject selectCatId(Map params){
         return new ResponseObject(State.OK,ServerConstant.MSG_GET_POST_CATID,this.articleMapper.selectByCatId(params));
+    }
+
+    public ResponseObject addCatId(Map params){
+        if(cateoryMapper.queryByName((String) params.get(ServerConstant.CATNA)).size()>0){
+            return new ResponseObject(State.ERROR,ServerConstant.MSG_ADD_CAT_FAIL);
+        }
+        else{
+            Cateory cateory=new Cateory();
+            cateory.setCatName((String) params.get(ServerConstant.CATNA));
+            this.cateoryMapper.insertSelectiveDeId(cateory);
+            return new ResponseObject(State.OK,ServerConstant.MSG_ADD_CAT,cateory);
+        }
+    }
+
+    public ResponseObject deleteCatId(Map params){
+        int id=this.cateoryMapper.deleteByPrimaryKey((Integer) params.get(ServerConstant.CATID));
+        if(id>0){
+            return new ResponseObject(State.OK,ServerConstant.MSG_DELETE_CAT_SUCCESS,id);
+        }else {
+            return new ResponseObject(State.ERROR,ServerConstant.MSG_DELETE_CAT_FAIL);
+        }
     }
 }

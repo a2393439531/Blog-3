@@ -90,4 +90,14 @@ public class ArticleController {
     public ResponseObject selCatId(@RequestBody Map params){
         return this.articleService.selectCatId(params);
     }
+    @RequestMapping(value = "/addCat",method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseObject addCatNa(@RequestBody Map params){
+        return this.articleService.addCatId(params);
+    }
+    @RequestMapping(value = "/deleteCat",method = RequestMethod.POST)
+    @ResponseBody
+    public ResponseObject deleteCat(@RequestBody Map params){
+        return this.articleService.deleteCatId(params   );
+    }
 }
