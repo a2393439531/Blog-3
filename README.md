@@ -249,6 +249,46 @@ springmvc+mybatis+maven+mysql搭建博客
 				"description": "获取该类的所有文章"
 			},
 			"response": []
+		},
+		{
+			"name": "http://localhost:8080/blog/article/addCat",
+			"request": {
+				"url": "http://localhost:8080/blog/article/addCat",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"catna\":\"c\"\n}"
+				},
+				"description": "添加分类"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/blog/article/deleteCat",
+			"request": {
+				"url": "http://localhost:8080/blog/article/deleteCat",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"catId\":20\n}"
+				},
+				"description": "删除分类"
+			},
+			"response": []
 		}
 	]
 }

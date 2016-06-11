@@ -15,7 +15,6 @@ CREATE TABLE article
     summary TEXT,
     publish_date DATE,
     cat_id INT(20),
-    CONSTRAINT art_cat FOREIGN KEY (cat_id) REFERENCES cateory (cat_id),
     CONSTRAINT art_user FOREIGN KEY (user_id) REFERENCES user (id)
 );
 CREATE INDEX art_cat ON article (cat_id);
@@ -29,9 +28,10 @@ CREATE TABLE article_detail
 );
 CREATE TABLE cateory
 (
-    cat_id INT(20) PRIMARY KEY NOT NULL,
+    cat_id INT(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,
     cat_name VARCHAR(255)
 );
+CREATE UNIQUE INDEX cateory_cat_id_uindex ON cateory (cat_id);
 CREATE TABLE photo
 (
     pho_id INT(20) PRIMARY KEY NOT NULL AUTO_INCREMENT,

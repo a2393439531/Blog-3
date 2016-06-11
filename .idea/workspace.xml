@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19596fd8-088f-42f6-a395-ea90b3dd1558" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/blog/WEB-INF/classes/com/scau/entity/ServerConstant.class" afterPath="$PROJECT_DIR$/target/blog/WEB-INF/classes/com/scau/entity/ServerConstant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/scau/entity/ServerConstant.class" afterPath="$PROJECT_DIR$/target/classes/com/scau/entity/ServerConstant.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scau/controller/ArticleController.java" afterPath="$PROJECT_DIR$/src/main/java/com/scau/controller/ArticleController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scau/dao/ArticleMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/scau/dao/ArticleMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scau/entity/ServerConstant.java" afterPath="$PROJECT_DIR$/src/main/java/com/scau/entity/ServerConstant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scau/mapping/ArticleMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/scau/mapping/ArticleMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scau/mapping/CateoryMapper.xml" afterPath="$PROJECT_DIR$/src/main/java/com/scau/mapping/CateoryMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scau/service/ArticleService.java" afterPath="$PROJECT_DIR$/src/main/java/com/scau/service/ArticleService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="Blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -154,7 +144,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArticleLimit.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ArticleLimit.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/entity/ArticleLimit.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="501">
@@ -170,6 +160,16 @@
                 <element signature="e#605#606#0" expanded="true" />
                 <element signature="e#639#640#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6670">
+              <caret line="293" column="1" selection-start-line="293" selection-start-column="1" selection-end-line="293" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -192,45 +192,26 @@
             <state relative-caret-position="315">
               <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
               <folding>
-                <marker date="1465660572217" expanded="true" signature="1048:1205" placeholder="select , fro... " />
-                <marker date="1465660572217" expanded="true" signature="1337:1350" placeholder="SELECT * FRO... " />
-                <marker date="1465660572217" expanded="true" signature="1337:1358" placeholder="SELECT * FRO... article" />
-                <marker date="1465660572217" expanded="true" signature="1337:1414" placeholder="SELECT * FRO... article" />
-                <marker date="1465660572217" expanded="true" signature="1337:1423" placeholder="SELECT * FRO... article" />
-                <marker date="1465660572217" expanded="true" signature="1536:1563" placeholder="SELECT * FRO... article" />
-                <marker date="1465660572217" expanded="true" signature="1536:1611" placeholder="SELECT * FRO... article" />
-                <marker date="1465660572217" expanded="true" signature="1721:1734" placeholder="SELECT * FRO... " />
-                <marker date="1465660572217" expanded="true" signature="1721:1736" placeholder="SELECT * FRO... actr" />
-                <marker date="1465660572217" expanded="true" signature="1721:1764" placeholder="SELECT * FRO... acticle" />
-                <marker date="1465660572217" expanded="true" signature="1721:1778" placeholder="SELECT * FRO... acticle" />
-                <marker date="1465660572217" expanded="true" signature="1721:1786" placeholder="SELECT * FRO... acticle" />
-                <marker date="1465660572217" expanded="true" signature="1879:1899" placeholder="SELECT COUNT... " />
-                <marker date="1465660572217" expanded="true" signature="1879:1907" placeholder="SELECT COUNT... article" />
-                <marker date="1465660572217" expanded="true" signature="1879:1931" placeholder="SELECT COUNT... article" />
-                <marker date="1465660572217" expanded="true" signature="2018:2082" placeholder="delete from " />
-                <marker date="1465660572217" expanded="true" signature="2163:2450" placeholder="insert into article... " />
-                <marker date="1465660572217" expanded="true" signature="4736:5288" placeholder="update artic... " />
-                <marker date="1465660572217" expanded="true" signature="5390:5677" placeholder="update artic... " />
-                <marker date="1465660572217" expanded="true" signature="5770:6008" placeholder="update artic... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CateoryMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scau/mapping/CateoryMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-              <folding>
-                <marker date="1465658793357" expanded="true" signature="573:683" placeholder="select from cateory" />
-                <marker date="1465658793357" expanded="true" signature="756:784" placeholder="SELECT COUNT... cateory" />
-                <marker date="1465658793357" expanded="true" signature="888:952" placeholder="SELECT cat_i... cateory" />
-                <marker date="1465658793357" expanded="true" signature="1152:1173" placeholder="SELECT * FRO... cateory" />
-                <marker date="1465658793357" expanded="true" signature="1264:1328" placeholder="delete from " />
-                <marker date="1465658793357" expanded="true" signature="1409:1515" placeholder="insert into cateory... " />
-                <marker date="1465658793357" expanded="true" signature="2907:3083" placeholder="update cateo... " />
-                <marker date="1465658793357" expanded="true" signature="3176:3282" placeholder="update cateo... " />
+                <marker date="1465660757033" expanded="true" signature="1048:1205" placeholder="select , fro... " />
+                <marker date="1465660757033" expanded="true" signature="1337:1350" placeholder="SELECT * FRO... " />
+                <marker date="1465660757033" expanded="true" signature="1337:1358" placeholder="SELECT * FRO... article" />
+                <marker date="1465660757033" expanded="true" signature="1337:1414" placeholder="SELECT * FRO... article" />
+                <marker date="1465660757033" expanded="true" signature="1337:1423" placeholder="SELECT * FRO... article" />
+                <marker date="1465660757033" expanded="true" signature="1536:1563" placeholder="SELECT * FRO... article" />
+                <marker date="1465660757033" expanded="true" signature="1536:1611" placeholder="SELECT * FRO... article" />
+                <marker date="1465660757033" expanded="true" signature="1721:1734" placeholder="SELECT * FRO... " />
+                <marker date="1465660757033" expanded="true" signature="1721:1736" placeholder="SELECT * FRO... actr" />
+                <marker date="1465660757033" expanded="true" signature="1721:1764" placeholder="SELECT * FRO... acticle" />
+                <marker date="1465660757033" expanded="true" signature="1721:1778" placeholder="SELECT * FRO... acticle" />
+                <marker date="1465660757033" expanded="true" signature="1721:1786" placeholder="SELECT * FRO... acticle" />
+                <marker date="1465660757033" expanded="true" signature="1879:1899" placeholder="SELECT COUNT... " />
+                <marker date="1465660757033" expanded="true" signature="1879:1907" placeholder="SELECT COUNT... article" />
+                <marker date="1465660757033" expanded="true" signature="1879:1931" placeholder="SELECT COUNT... article" />
+                <marker date="1465660757033" expanded="true" signature="2018:2082" placeholder="delete from " />
+                <marker date="1465660757033" expanded="true" signature="2163:2450" placeholder="insert into article... " />
+                <marker date="1465660757033" expanded="true" signature="4736:5288" placeholder="update artic... " />
+                <marker date="1465660757033" expanded="true" signature="5390:5677" placeholder="update artic... " />
+                <marker date="1465660757033" expanded="true" signature="5770:6008" placeholder="update artic... " />
               </folding>
             </state>
           </provider>
@@ -315,7 +296,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/config/springmvc.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/config/mybatis/SqlMapConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/config/spring/application-service.xml" />
@@ -361,11 +341,12 @@
         <option value="dbtable:/25b997b0/7bb16f20-566e-4108-a05e-f915dbbaefaa/blog.cateory" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/mapping/CateoryMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/entity/ServerConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/scau/entity/ArticleLimit.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/controller/ArticleController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/mapping/ArticleMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/dao/ArticleMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scau/service/ArticleService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/scau/entity/ArticleLimit.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -1342,12 +1323,12 @@
       <workItem from="1464612466361" duration="129000" />
       <workItem from="1464613784870" duration="467000" />
       <workItem from="1465564600844" duration="2341000" />
-      <workItem from="1465607135931" duration="31167000" />
+      <workItem from="1465607135931" duration="31412000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107065000" />
+    <option name="totallyTimeSpent" value="107310000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1469,13 +1450,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.2.5.RELEASE/spring-core-4.2.5.RELEASE.jar!/org/springframework/util/StringUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -1866,14 +1840,14 @@
         <state relative-caret-position="162">
           <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
           <folding>
-            <marker date="1465658793357" expanded="true" signature="573:683" placeholder="select from cateory" />
-            <marker date="1465658793357" expanded="true" signature="756:784" placeholder="SELECT COUNT... cateory" />
-            <marker date="1465658793357" expanded="true" signature="888:952" placeholder="SELECT cat_i... cateory" />
-            <marker date="1465658793357" expanded="true" signature="1152:1173" placeholder="SELECT * FRO... cateory" />
-            <marker date="1465658793357" expanded="true" signature="1264:1328" placeholder="delete from " />
-            <marker date="1465658793357" expanded="true" signature="1409:1515" placeholder="insert into cateory... " />
-            <marker date="1465658793357" expanded="true" signature="2907:3083" placeholder="update cateo... " />
-            <marker date="1465658793357" expanded="true" signature="3176:3282" placeholder="update cateo... " />
+            <marker date="1465660757034" expanded="true" signature="573:683" placeholder="select from cateory" />
+            <marker date="1465660757034" expanded="true" signature="756:784" placeholder="SELECT COUNT... cateory" />
+            <marker date="1465660757034" expanded="true" signature="888:952" placeholder="SELECT cat_i... cateory" />
+            <marker date="1465660757034" expanded="true" signature="1152:1173" placeholder="SELECT * FRO... cateory" />
+            <marker date="1465660757034" expanded="true" signature="1264:1328" placeholder="delete from " />
+            <marker date="1465660757034" expanded="true" signature="1409:1515" placeholder="insert into cateory... " />
+            <marker date="1465660757034" expanded="true" signature="2907:3083" placeholder="update cateo... " />
+            <marker date="1465660757034" expanded="true" signature="3176:3282" placeholder="update cateo... " />
           </folding>
         </state>
       </provider>
@@ -1945,26 +1919,26 @@
         <state relative-caret-position="315">
           <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
           <folding>
-            <marker date="1465660572217" expanded="true" signature="1048:1205" placeholder="select , fro... " />
-            <marker date="1465660572217" expanded="true" signature="1337:1350" placeholder="SELECT * FRO... " />
-            <marker date="1465660572217" expanded="true" signature="1337:1358" placeholder="SELECT * FRO... article" />
-            <marker date="1465660572217" expanded="true" signature="1337:1414" placeholder="SELECT * FRO... article" />
-            <marker date="1465660572217" expanded="true" signature="1337:1423" placeholder="SELECT * FRO... article" />
-            <marker date="1465660572217" expanded="true" signature="1536:1563" placeholder="SELECT * FRO... article" />
-            <marker date="1465660572217" expanded="true" signature="1536:1611" placeholder="SELECT * FRO... article" />
-            <marker date="1465660572217" expanded="true" signature="1721:1734" placeholder="SELECT * FRO... " />
-            <marker date="1465660572217" expanded="true" signature="1721:1736" placeholder="SELECT * FRO... actr" />
-            <marker date="1465660572217" expanded="true" signature="1721:1764" placeholder="SELECT * FRO... acticle" />
-            <marker date="1465660572217" expanded="true" signature="1721:1778" placeholder="SELECT * FRO... acticle" />
-            <marker date="1465660572217" expanded="true" signature="1721:1786" placeholder="SELECT * FRO... acticle" />
-            <marker date="1465660572217" expanded="true" signature="1879:1899" placeholder="SELECT COUNT... " />
-            <marker date="1465660572217" expanded="true" signature="1879:1907" placeholder="SELECT COUNT... article" />
-            <marker date="1465660572217" expanded="true" signature="1879:1931" placeholder="SELECT COUNT... article" />
-            <marker date="1465660572217" expanded="true" signature="2018:2082" placeholder="delete from " />
-            <marker date="1465660572217" expanded="true" signature="2163:2450" placeholder="insert into article... " />
-            <marker date="1465660572217" expanded="true" signature="4736:5288" placeholder="update artic... " />
-            <marker date="1465660572217" expanded="true" signature="5390:5677" placeholder="update artic... " />
-            <marker date="1465660572217" expanded="true" signature="5770:6008" placeholder="update artic... " />
+            <marker date="1465660757033" expanded="true" signature="1048:1205" placeholder="select , fro... " />
+            <marker date="1465660757033" expanded="true" signature="1337:1350" placeholder="SELECT * FRO... " />
+            <marker date="1465660757033" expanded="true" signature="1337:1358" placeholder="SELECT * FRO... article" />
+            <marker date="1465660757033" expanded="true" signature="1337:1414" placeholder="SELECT * FRO... article" />
+            <marker date="1465660757033" expanded="true" signature="1337:1423" placeholder="SELECT * FRO... article" />
+            <marker date="1465660757033" expanded="true" signature="1536:1563" placeholder="SELECT * FRO... article" />
+            <marker date="1465660757033" expanded="true" signature="1536:1611" placeholder="SELECT * FRO... article" />
+            <marker date="1465660757033" expanded="true" signature="1721:1734" placeholder="SELECT * FRO... " />
+            <marker date="1465660757033" expanded="true" signature="1721:1736" placeholder="SELECT * FRO... actr" />
+            <marker date="1465660757033" expanded="true" signature="1721:1764" placeholder="SELECT * FRO... acticle" />
+            <marker date="1465660757033" expanded="true" signature="1721:1778" placeholder="SELECT * FRO... acticle" />
+            <marker date="1465660757033" expanded="true" signature="1721:1786" placeholder="SELECT * FRO... acticle" />
+            <marker date="1465660757033" expanded="true" signature="1879:1899" placeholder="SELECT COUNT... " />
+            <marker date="1465660757033" expanded="true" signature="1879:1907" placeholder="SELECT COUNT... article" />
+            <marker date="1465660757033" expanded="true" signature="1879:1931" placeholder="SELECT COUNT... article" />
+            <marker date="1465660757033" expanded="true" signature="2018:2082" placeholder="delete from " />
+            <marker date="1465660757033" expanded="true" signature="2163:2450" placeholder="insert into article... " />
+            <marker date="1465660757033" expanded="true" signature="4736:5288" placeholder="update artic... " />
+            <marker date="1465660757033" expanded="true" signature="5390:5677" placeholder="update artic... " />
+            <marker date="1465660757033" expanded="true" signature="5770:6008" placeholder="update artic... " />
           </folding>
         </state>
       </provider>
@@ -2004,6 +1978,14 @@
             <element signature="e#605#606#0" expanded="true" />
             <element signature="e#639#640#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6670">
+          <caret line="293" column="1" selection-start-line="293" selection-start-column="1" selection-end-line="293" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
