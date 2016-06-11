@@ -1,5 +1,6 @@
 # Blog
 > springmvc+mybatis+maven+mysql搭建博客
+
 数据库设计图：
 ![image](https://github.com/scau-beyondboy/Blog/blob/master/2016-06-12_001056.png)
 ```
