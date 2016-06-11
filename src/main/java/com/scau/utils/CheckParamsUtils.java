@@ -1,5 +1,7 @@
 package com.scau.utils;
 
+import org.springframework.util.StringUtils;
+
 import java.util.Map;
 
 /**
@@ -42,5 +44,22 @@ public final class CheckParamsUtils {
             }
         }
         return true;
+    }
+
+    public static boolean checkStrNull(String... paramsValue){
+        for(String paramValue: paramsValue){
+            if(StringUtils.isEmpty(paramValue)){
+                return true;
+            }
+        }
+        return false;
+    }
+    public static boolean checkIntNull(Integer... paramsValue){
+        for(Integer paramValue: paramsValue){
+            if(paramValue==0){
+                return true;
+            }
+        }
+        return false;
     }
 }

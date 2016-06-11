@@ -1,5 +1,7 @@
 package com.scau.entity;
 
+import com.scau.service.State;
+
 /**
  * @Author: beyondboy
  * @Gmail: xuguoli.scau@gamil.com
@@ -21,6 +23,13 @@ public class ResponseObject {
         this(state,msg,null);
     }
 
+    public static ResponseObject fail(String msg){
+        return new ResponseObject(State.ERROR,msg);
+    }
+
+    public static ResponseObject success(String msg){
+        return new ResponseObject(State.OK,msg);
+    }
     public String getMsg() {
         return msg;
     }

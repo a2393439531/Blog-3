@@ -57,6 +57,25 @@
       </if>
     </trim>
   </insert>
+  <insert id="insertSelectiveDeId" parameterType="com.scau.entity.ArticleDetail" useGeneratedKeys="true" keyProperty="art_de_id">
+    insert into article_detail
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="articleClick != null" >
+        article_click,
+      </if>
+      <if test="content != null" >
+        content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="articleClick != null" >
+        #{articleClick,jdbcType=INTEGER},
+      </if>
+      <if test="content != null" >
+        #{content,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.scau.entity.ArticleDetail" >
     update article_detail
     <set >

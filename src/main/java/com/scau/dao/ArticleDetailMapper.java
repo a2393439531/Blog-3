@@ -8,7 +8,7 @@ public interface ArticleDetailMapper {
     int insert(ArticleDetail record);
 
     int insertSelective(ArticleDetail record);
-
+    int insertSelectiveDeId(ArticleDetail record);
     ArticleDetail selectByPrimaryKey(Integer artDeId);
 
     int updateByPrimaryKeySelective(ArticleDetail record);

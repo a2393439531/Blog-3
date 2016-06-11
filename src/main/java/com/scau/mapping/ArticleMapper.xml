@@ -80,6 +80,44 @@
       </if>
     </trim>
   </insert>
+  <insert id="insertSelectiveDeId" parameterType="com.scau.entity.Article" useGeneratedKeys="true" keyProperty="artId" >
+    insert into article
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+--         art_id,
+      <if test="userId != null" >
+        user_id,
+      </if>
+      <if test="title != null" >
+        title,
+      </if>
+      <if test="publishDate != null" >
+        publish_date,
+      </if>
+      <if test="catId != null" >
+        cat_id,
+      </if>
+      <if test="summary != null" >
+        summary,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userId != null" >
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="title != null" >
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="publishDate != null" >
+        #{publishDate,jdbcType=DATE},
+      </if>
+      <if test="catId != null" >
+        #{catId,jdbcType=INTEGER},
+      </if>
+      <if test="summary != null" >
+        #{summary,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.scau.entity.Article" >
     update article
     <set >

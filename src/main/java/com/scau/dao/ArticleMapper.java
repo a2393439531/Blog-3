@@ -8,6 +8,7 @@ public interface ArticleMapper {
     int insert(Article record);
 
     int insertSelective(Article record);
+    int insertSelectiveDeId(Article record);
 
     Article selectByPrimaryKey(Integer artId);
 

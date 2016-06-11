@@ -9,7 +9,7 @@ public interface TagMapper {
     int insert(Tag record);
 
     int insertSelective(Tag record);
-
+    int insertSelectiveDeId(Tag record);
     Tag selectByPrimaryKey(TagKey key);
 
     int updateByPrimaryKeySelective(Tag record);

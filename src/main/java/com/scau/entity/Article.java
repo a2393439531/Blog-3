@@ -1,7 +1,7 @@
 package com.scau.entity;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 
 public class Article implements Serializable {
     private Integer artId;

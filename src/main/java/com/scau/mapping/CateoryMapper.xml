@@ -14,6 +14,19 @@
     from cateory
     where cat_id = #{catId,jdbcType=INTEGER}
   </select>
+  <select id="getCount" resultType="java.lang.Integer">
+    SELECT COUNT(*) FROM cateory
+  </select>
+  <select id="queryByName" resultMap="BaseResultMap" parameterType="java.lang.String">
+    SELECT
+    <include refid="Base_Column_List" />
+    from cateory
+    <where>
+    <if test="catName!=null">
+        cat_name=#{catName}
+    </if>
+  </where>
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from cateory
     where cat_id = #{catId,jdbcType=INTEGER}
@@ -40,6 +53,28 @@
         #{catName,jdbcType=VARCHAR},
       </if>
     </trim>
+  </insert>
+  <insert id="insertSelectiveDeId" parameterType="com.scau.entity.Cateory" useGeneratedKeys="true" keyProperty="catId">
+      <selectKey keyProperty="catId" resultType="int" order="BEFORE">
+          SELECT LAST_INSERT_ID()
+      </selectKey>
+    insert into cateory
+      <trim prefix="(" suffix=")" suffixOverrides="," >
+          <if test="catId != null" >
+              cat_id,
+          </if>
+          <if test="catName != null" >
+              cat_name,
+          </if>
+      </trim>
+      <trim prefix="values (" suffix=")" suffixOverrides="," >
+          <if test="catId != null" >
+              #{catId,jdbcType=INTEGER},
+          </if>
+          <if test="catName != null" >
+              #{catName,jdbcType=VARCHAR},
+          </if>
+      </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.scau.entity.Cateory" >
     update cateory
